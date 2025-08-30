@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { ArrowRight, Star, Shield, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -36,7 +37,7 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="/finance">
-                <Button size="lg" variant="outline" className="btn-premium text-lg px-8 py-4">
+                <Button size="lg" className="btn-hero text-lg px-8 py-4">
                   Get Financing
                 </Button>
               </Link>
