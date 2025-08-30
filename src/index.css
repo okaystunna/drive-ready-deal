@@ -1,42 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Premium Automotive Design System */
 @layer base {
   :root {
+    /* Core Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 210 11% 15%;
+    
+    /* Premium Automotive Theme */
+    --primary: 210 100% 50%; /* Electric Blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 60%;
+    
+    --secondary: 210 11% 15%; /* Dark Charcoal */
+    --secondary-foreground: 0 0% 98%;
+    
+    --accent: 45 100% 50%; /* Gold Accent */
+    --accent-foreground: 210 11% 15%;
+    
+    --muted: 210 14% 97%;
+    --muted-foreground: 210 6% 46%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 210 11% 15%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 210 11% 15%;
+    
+    --border: 210 12% 91%;
+    --input: 210 12% 95%;
+    --ring: 210 100% 50%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --radius: 0.75rem;
+    
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(210 11% 15%) 0%, hsl(210 20% 25%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 14% 97%));
+    
+    /* Automotive Shadows */
+    --shadow-card: 0 4px 24px -4px hsl(210 11% 15% / 0.1);
+    --shadow-premium: 0 20px 40px -12px hsl(210 11% 15% / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    
+    /* Smooth Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +116,32 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-glow transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-premium {
+    @apply bg-secondary text-secondary-foreground border border-accent/20 hover:border-accent hover:bg-secondary/90 font-medium px-6 py-3 rounded-lg transition-all duration-300;
+  }
+  
+  /* Vehicle Card Styles */
+  .vehicle-card {
+    @apply bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300 hover:-translate-y-1 border border-border/50;
+  }
+  
+  /* Premium Input Styles */
+  .input-premium {
+    @apply bg-muted/50 border-border focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-lg px-4 py-3 transition-all duration-200;
+  }
+  
+  /* Gradient Text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
   }
 }
