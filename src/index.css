@@ -128,7 +128,7 @@
   }
   
   .btn-premium {
-    @apply bg-secondary text-secondary-foreground border border-accent/20 hover:border-accent hover:bg-secondary/90 font-medium px-6 py-3 rounded-lg transition-all duration-300;
+    @apply bg-background text-foreground border-2 border-primary/30 hover:border-primary hover:bg-primary/10 hover:text-primary font-medium px-6 py-3 rounded-lg transition-all duration-300;
   }
   
   /* Vehicle Card Styles */

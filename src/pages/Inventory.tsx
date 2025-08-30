@@ -175,7 +175,7 @@ const Inventory = () => {
                 </SelectContent>
               </Select>
 
-              <Button variant="outline" onClick={clearFilters} className="btn-premium">
+              <Button variant="premium" onClick={clearFilters}>
                 <SlidersHorizontal size={16} className="mr-2" />
                 Clear Filters
               </Button>

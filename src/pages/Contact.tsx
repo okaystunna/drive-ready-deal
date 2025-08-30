@@ -68,7 +68,7 @@ const Contact = () => {
                         Premium District<br />
                         City, ST 12345
                       </p>
-                      <Button variant="outline" size="sm" className="mt-3 btn-premium">
+                      <Button variant="premium" size="sm" className="mt-3">
                         Get Directions
                       </Button>
                     </div>
@@ -89,7 +89,7 @@ const Contact = () => {
                         Service: (555) 123-4568<br />
                         Parts: (555) 123-4569
                       </p>
-                      <Button variant="outline" size="sm" className="btn-premium">
+                      <Button variant="premium" size="sm">
                         Call Now
                       </Button>
                     </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                         Sales: sales@premiumauto.com<br />
                         Service: service@premiumauto.com
                       </p>
-                      <Button variant="outline" size="sm" className="btn-premium">
+                      <Button variant="premium" size="sm">
                         Send Email
                       </Button>
                     </div>
@@ -231,14 +231,14 @@ const Contact = () => {
 
             {/* Quick Actions */}
             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Button variant="outline" className="btn-premium p-6 h-auto">
+              <Button variant="premium" className="p-6 h-auto">
                 <div className="text-center">
                   <Phone className="mx-auto mb-2 text-primary" size={24} />
                   <div className="font-semibold">Call Sales</div>
                   <div className="text-sm text-muted-foreground">(555) 123-4567</div>
                 </div>
               </Button>
-              <Button variant="outline" className="btn-premium p-6 h-auto">
+              <Button variant="premium" className="p-6 h-auto">
                 <div className="text-center">
                   <MessageCircle className="mx-auto mb-2 text-primary" size={24} />
                   <div className="font-semibold">Live Chat</div>
